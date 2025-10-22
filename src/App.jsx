@@ -3,6 +3,7 @@ import Sidebar from './components/Sidebar'
 import Player from './components/Player'
 import Display from './components/Display'
 import { PlayerContext } from './context/PlayerContext'
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 const App = () => {
 
@@ -17,9 +18,10 @@ const App = () => {
         <Sidebar/>
         <Display/>
       </div> 
-        <Player/>
-        <audio ref={audioRef} preload='auto' src={track.file}></audio>
-       </div>
+      <Player/>
+      <audio ref={audioRef} preload='auto' src={track.file}></audio>
+      <SpeedInsights />
+    </div>
   )
 }
 
