@@ -4,6 +4,7 @@ import Player from './components/Player'
 import Display from './components/Display'
 import { PlayerContext } from './context/PlayerContext'
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import { Analytics } from '@vercel/analytics/react';    
 
 const App = () => {
 
@@ -21,6 +22,7 @@ const App = () => {
       <Player/>
       <audio ref={audioRef} preload='auto' src={track.file}></audio>
       <SpeedInsights />
+      <Analytics/>
     </div>
   )
 }
